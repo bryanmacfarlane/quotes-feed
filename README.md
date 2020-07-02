@@ -11,6 +11,8 @@ Coded in nodejs as it excels as a front end server which can share javascript an
 
 https://www.typescriptlang.org/docs/handbook/react-&-webpack.html 
 
+React Functional components for view and classes for "controls"
+
 
 ## Backend
 

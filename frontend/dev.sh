@@ -11,4 +11,8 @@ layout() {
     npx webpack --env.NODE_ENV=production
 }
 
+scorch() {
+    git clean -fdx
+}
+
 "$@"

@@ -3,8 +3,9 @@ node_modules/
 
 # JavaScript
 *.js
+*.js.map
 !webpack.config.js
-!public/script/*.js
+!public/js/*.js
 
 # Output
 _dist

@@ -14,8 +14,8 @@ export const DefaultLayout: FunctionComponent<DefaultLayoutProps> = ({ title, ch
           <title>{title}</title>
           <link rel="stylesheet" href="css/bulma.min.css"/>
 
-          <script src="js/react.development.js"></script>
-          <script src="js/react-dom.development.js"></script>
+          <script src="js/react.production.min.js"></script>
+          <script src="js/react-dom.production.min.js"></script>
           <script defer src="script/index.js"></script>            
       </head>
       <body>{children}</body>

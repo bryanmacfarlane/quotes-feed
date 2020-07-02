@@ -12,11 +12,7 @@ Composed of web views and front-end api routes for browser clients to call Ajax.
 
 Client to front-end communication is http+json as json is the language of choice for the web and javascript specifically.
 
-https://www.typescriptlang.org/docs/handbook/react-&-webpack.html 
-
-React Functional components for view and classes for "controls"
-
-Builds in place for fast innter loop.  Does a "layout" to a clean _dist folder (just build output) for the official container build.
+Builds in place for fast inner loop.  Does a "layout" to a clean _dist folder (just build output) for the official container build.
 
 ## Backend
 

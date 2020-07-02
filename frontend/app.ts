@@ -12,9 +12,6 @@ import {ErrorView} from './views/error'
 export async function create() {
     var app: express.Express = express();
 
-    // app.set('view engine', 'jsx');
-    // app.engine('jsx', require('express-react-views').createEngine({ beautify: true }));
-
     // TODO: hook up logger
 
     app.use(bodyParser.json());
@@ -46,11 +43,6 @@ export async function create() {
             res.status(err.status || 500);
             let el = React.createElement(ErrorView, {statusCode: res.statusCode, message: err.message})
             res.send(ReactDOM.renderToString(el));
-
-            // res.render('error', {
-            //     message: err.message,
-            //     error: err
-            // });
         });
     }
 
@@ -59,11 +51,7 @@ export async function create() {
     app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
         res.status(err.status || 500);
         let el = React.createElement(ErrorView, {statusCode: res.statusCode, message: err.message})
-        res.send(ReactDOM.renderToString(el));        
-        // res.render('error', {
-        //     message: err.message,
-        //     error: {}
-        // });
+        res.send(ReactDOM.renderToString(el));
     });    
 
     return app;

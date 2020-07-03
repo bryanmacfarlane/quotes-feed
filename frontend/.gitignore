@@ -1,2 +1,11 @@
+# Modules
 node_modules/
-.dist/
+
+# JavaScript
+*.js
+*.js.map
+!webpack.config.js
+!public/js/*.js
+
+# Output
+_dist

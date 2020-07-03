@@ -2,13 +2,12 @@
 import React, { FunctionComponent } from 'react';
 
 export interface DefaultLayoutProps {
-  title: string,
-  state?: string
+  title: string
 }
 
 // https://fettblog.eu/typescript-react/children/
-export const DefaultLayout: FunctionComponent<DefaultLayoutProps> = ({ title, state, children }) => 
-  <html>
+export const DefaultLayout: FunctionComponent<DefaultLayoutProps> = ({ title, children }) => {
+  return <html>
       <head>
           <meta charSet="utf-8"/>
           <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -21,3 +20,4 @@ export const DefaultLayout: FunctionComponent<DefaultLayoutProps> = ({ title, st
         {children}
       </body>      
   </html>
+}

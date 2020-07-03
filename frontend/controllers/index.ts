@@ -20,8 +20,7 @@ router.get('/', (req: Request, res: Response) => {
     let state = {title: "Quotes", message: "Server"};
     let el = React.createElement(IndexView, {
         title: state.title, 
-        message: state.message, 
-        state: JSON.stringify(state)})
+        message: state.message})
     
     res.send(ReactDOM.renderToString(el));
 });

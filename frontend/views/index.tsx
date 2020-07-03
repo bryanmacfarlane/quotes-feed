@@ -3,33 +3,35 @@ import React, { FunctionComponent } from 'react';
 import { DefaultLayout } from './layouts/default';
 import { NavView } from './nav';
 import { Hello } from './components/hello';
+import { State } from './components/state';
 
 export interface IndexViewProps { 
   title: string, 
-  message: string,
-  state?: string  // optional since only server sets
-                  // TODO: get rid of passing around ideally
+  message: string
 }
 
-export const IndexView: FunctionComponent<IndexViewProps> = ({ title, message, state }) => 
-<DefaultLayout title={title} state={state}>
-  {/*----------------------------------------
-      Hero Section
-    -----------------------------------------*/}
-  <section className="hero is-light is-bold">
-    <div className="hero-head">
-      <NavView />
-    </div>
+export const IndexView: FunctionComponent<IndexViewProps> = ({ title, message }) => {
+  let stateJson: string = JSON.stringify({title: title, message: message});
+  return <DefaultLayout title={title}>
+            {/*----------------------------------------
+                Hero Section
+              -----------------------------------------*/}
+            <section className="hero is-light is-bold">
+              <div className="hero-head">
+                <NavView />
+              </div>
 
-    <div className="hero-body">
-      <div id="clock"></div>
-      <Hello name={ message }/>
-    </div>
+              <div className="hero-body">
+                <div id="clock"></div>
+                <Hello name={ message }/>
+              </div>
 
-    <div className="hero-foot">
-      Footer
-    </div>
-  </section>
-  <script dangerouslySetInnerHTML={{__html: "window.__INITIAL_STATE__=" + state}}></script>
-  <script src="script/index.js"></script>  
-</DefaultLayout>
+              <div className="hero-foot">
+                Footer
+              </div>
+            </section>
+            <State state={stateJson}/>
+            <script src="script/index.js"></script>  
+          </DefaultLayout>
+}
+

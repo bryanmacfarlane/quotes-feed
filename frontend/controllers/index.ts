@@ -17,7 +17,7 @@ router.get('/', (req: Request, res: Response) => {
     // We can't use res.render('<viewName>', ...) since the tsx is compiled to js
     // so we just load it directly
     // https://stackoverflow.com/questions/40877044/typescript-2-react-js-and-express-server-side-rendering-issue
-    let state = {title: "Quotes", message: "Worlds"};
+    let state = {title: "Quotes", message: "Server"};
     let el = React.createElement(IndexView, {
         title: state.title, 
         message: state.message, 

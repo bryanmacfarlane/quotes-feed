@@ -17,7 +17,7 @@ export interface CustomWindow extends Window {
 
 declare let window: CustomWindow;
 
-//alert(JSON.stringify(window.__INITIAL_STATE__))
+// alert(JSON.stringify(window.__INITIAL_STATE__))
 
 let idxState: any = window.__INITIAL_STATE__
 

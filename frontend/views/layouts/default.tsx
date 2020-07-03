@@ -19,7 +19,5 @@ export const DefaultLayout: FunctionComponent<DefaultLayoutProps> = ({ title, st
       </head>
       <body>
         {children}
-      </body>
-      <script dangerouslySetInnerHTML={{__html: "window.__INITIAL_STATE__=" + state}}></script>
-      <script src="script/index.js"></script>      
+      </body>      
   </html>

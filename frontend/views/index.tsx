@@ -30,4 +30,6 @@ export const IndexView: FunctionComponent<IndexViewProps> = ({ title, message, s
       Footer
     </div>
   </section>
+  <script dangerouslySetInnerHTML={{__html: "window.__INITIAL_STATE__=" + state}}></script>
+  <script src="script/index.js"></script>  
 </DefaultLayout>

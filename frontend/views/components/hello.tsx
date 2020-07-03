@@ -6,7 +6,7 @@ type HelloProps = {
 
 export class Hello extends Component<HelloProps, {}> {
     render() {
-    return <h2>Hello { this.props.name }</h2>
+    return <h2><div id="hello">Hello { this.props.name }</div></h2>
     }
 }
 

@@ -36,12 +36,11 @@ export async function create() {
     });
 
     // development error handler
-    // will print stacktrace
-    
+    // will print stacktrace 
     if (app.get('env') === 'development') {
         app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
             res.status(err.status || 500);
-            let el = React.createElement(ErrorView, {statusCode: res.statusCode, message: err.message})
+            let el = React.createElement(ErrorView, {statusCode: res.statusCode, message: err.message.toString()})
             res.send(ReactDOM.renderToString(el));
         });
     }
@@ -50,9 +49,9 @@ export async function create() {
     // no stacktraces leaked to user
     app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
         res.status(err.status || 500);
-        let el = React.createElement(ErrorView, {statusCode: res.statusCode, message: err.message})
+        let el = React.createElement(ErrorView, {statusCode: res.statusCode, message: err.message.toString()})
         res.send(ReactDOM.renderToString(el));
-    });    
+    });
 
     return app;
 }

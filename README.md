@@ -1,20 +1,26 @@
 # quotes-feed
 
-Sample service using modern technologies.  The goal is to focus on a scaleable solution (both in code and architecturally) while keeping the problem domain as simple.  A set of quotes.  For pure learning and illustrative purposes.
+A sample service using modern technologies.  The goal is to focus on a scaleable solution (both in code and architecturally) while keeping the problem domain as simple: a set of quotes. For pure learning and illustrative purposes.   
 
 ## frontend
 
-A modern [isomorphic web app](https://medium.com/airbnb-engineering/isomorphic-javascript-the-future-of-web-apps-10882b7a2ebc#.4nyzv6jea) using:
+A modern [isomorphic web app](https://medium.com/airbnb-engineering/isomorphic-javascript-the-future-of-web-apps-10882b7a2ebc#.4nyzv6jea) as node express app using react+typescript and webpack:
 
-ExpressJS + Typescript + React + WebPack
+<p align="center">
+    <img src="frontend/docs/fe.png"/>
+</p>
 
-Isomorphic : Server side rendered (SEO, perf), Client side hydrated (dynamic app).  Shared javascript and react views between the server and client.  The reason for nodejs frontend in this sample architecture.
-
-Composed of web views and front-end api routes for browser clients to call Ajax.
-
-Client to front-end communication is http+json as json is the language of choice for the web and javascript specifically.
+- React views and js shared between server and client (browser)
+- Primary views server side rendered (SEO/perf).  
+- Hydrated and augmented on client for dynamic client behaviors. 
 
 Builds in place for fast inner loop.  Does a "layout" to a clean _dist folder (just build output) for the official container build.
+
+```bash
+$ npm install    # once
+$ npm run build
+$ node ./server.js
+```
 
 ## backend
 
@@ -24,18 +30,6 @@ Consists of storage apis (abstracts specific implementation).  Provides relevant
 
 Front-end to backend communication is RPC and specifically `gRPC`.
 
-Coded in `go` as `node` is not the best choice for compute intensive 
+Coded in `go` as `node` is not the best choice for compute intensive.
 
-## References
 
-[Typescript: React & WebPack](https://www.typescriptlang.org/docs/handbook/react-&-webpack.html#add-a-typescript-configuration-file)
-
-[Typescript and React](https://fettblog.eu/typescript-react/components/)
-
-[Server and Client side React](https://dev.to/marvelouswololo/how-to-server-side-render-react-hydrate-it-on-the-client-and-combine-client-and-server-routes-1a3p)
-
-[Express & Typescript](https://github.com/BrianDGLS/express-ts)
-
-[Render React views JIT](https://stackoverflow.com/questions/40877044/typescript-2-react-js-and-express-server-side-rendering-issue)
-
-[Isomorphic React Web App](https://medium.com/@diegocasmo/using-reacts-context-to-pass-variables-from-the-server-to-the-client-f2ce5f274172)

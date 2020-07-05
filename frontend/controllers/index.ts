@@ -1,8 +1,6 @@
 // Import only what we need from express
 import { Router, Request, Response } from 'express';
 
-import React from 'react';
-import ReactDOM from 'react-dom/server';
 import * as controller from './controller'
 import {IndexView} from '../views/index'
 

@@ -1,8 +1,8 @@
-# quotes-feed
+# Quotes Feed Sample Service
 
 A sample service using modern technologies.  The goal is to focus on a scaleable solution (both in code and architecturally) while keeping the problem domain as simple: a set of quotes. For pure learning and illustrative purposes.   
 
-## frontend
+## Front End (Web)
 
 A modern [isomorphic web app](https://medium.com/airbnb-engineering/isomorphic-javascript-the-future-of-web-apps-10882b7a2ebc#.4nyzv6jea) as node express app using react+typescript and webpack:
 
@@ -19,10 +19,10 @@ Builds in place for fast inner loop.  Does a "layout" to a clean _dist folder (j
 ```bash
 $ npm install    # once
 $ npm run build
-$ node ./server.js
+$ npm start 
 ```
 
-## backend
+## Back End
 
 Only accessible from the front-end via network configuration and security.
 
